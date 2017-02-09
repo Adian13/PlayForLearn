@@ -13,6 +13,9 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
+import static com.example.adi.playforlearn10.HomeAlunno.GEOGRAFIA;
+import static com.example.adi.playforlearn10.HomeAlunno.INGLESE;
+import static com.example.adi.playforlearn10.HomeAlunno.MATERIA;
 import static com.example.adi.playforlearn10.HomeAlunno.PRIMA;
 import static com.example.adi.playforlearn10.HomeAlunno.STORIA;
 
@@ -22,7 +25,7 @@ import static com.example.adi.playforlearn10.HomeAlunno.STORIA;
 
 public class ActivityGiocoStoGioIng extends AppCompatActivity{
     private String nome, materia, classe;
-    int errori=0, numEs=0, record=0;
+    int errori, numEs, record;
     ArrayList<Gioco_StoGeoIng> giochiDaLanciare;
     private Drawable icona;
     Integer immagine;
@@ -34,25 +37,55 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         numEs= getIntent().getIntExtra("Indice", 0);
-        errori= getIntent().getIntExtra("errori", 0);
-        record= getIntent().getIntExtra("record", 0);
+        errori= getIntent().getIntExtra("errori", errori);
+        record= getIntent().getIntExtra("record",errori);
         setContentView(R.layout.activity_gioco);
-         bt2 = (Button) findViewById(R.id.bt2);
+        bt2 = (Button) findViewById(R.id.bt2);
         bt1 = (Button) findViewById(R.id.bt1);
-         bt3 = (Button) findViewById(R.id.bt3);
+        bt3 = (Button) findViewById(R.id.bt3);
         bt4 = (Button) findViewById(R.id.bt4);
         giochiDaLanciare= new ArrayList<Gioco_StoGeoIng>();
-
-
+        materia= getIntent().getStringExtra("MATERIA");
+        Log.d("DEBUG", materia);
         //Gioco_StoGeoIng gioco= new Gioco_StoGeoIng(icona,  nome,  materia, classe, errori, immagine, soluzione,  opzione1, opzione2,  opzione3);
-        materia=STORIA;
+
         if(materia.compareTo(STORIA)==0){
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_lampada,"Lampada","Letto","Divano","Sedia"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_letto,"Letto","Tavolo","Divano","Sedia"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_padella,"Padella","Piatto","Tavolo","Cucchiaio"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_vasca,"Vasca","Water","Sedia","Scrivania"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.cane, "Cane", "Pizza", "Colore", "Cosa"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_vasca,"Vasca","Water","Sedia","Scrivania"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.cane, "Cane", "Pizza", "Colore", "Cosa"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.graffiti, "Graffiti", "fiume", "computer", "fiore"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.casa, "Casa", "Piscina", "Cortile", "Pallone"));
+        }
+        else if(materia.compareTo(GEOGRAFIA)==0){
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sole, "Sole", "Sardegna", "Sardina", "mamma"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.stelle, "Stelle", "mappa", "cappa", "mamma"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.mare, "Mare", "pesce", "carne", "posto"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.pietra, "pietra","animale", "penna", "pingu" ));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.montagna, "Montagna", "heidi", "capre", "fiume"));
+        }
+        else if(materia.compareTo(INGLESE)==0){
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "flowers", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sole, "Sun", "Sardegna", "Sardina", "mamma"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.stelle, "Stars", "mappa", "cappa", "mamma"));
 
         }
+
         gioco= giochiDaLanciare.get(numEs);
         ArrayList<String> opzioni = new ArrayList<String>(4);
         opzioni.add(gioco.getSoluzione());
@@ -104,29 +137,36 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity{
     //TODO controllo su quale layout caricare
     public boolean checkSoluzione(Gioco_StoGeoIng gioco, String opzione){
         if(opzione.compareTo(gioco.getSoluzione())==0){
-            avviaSuccessivoOFine();
             record++;
+            avviaSuccessivoOFine();
             return  true;
         }else{
             errori++;
+            avviaSuccessivoOFine();
             return false;
         }
     }
     public void avviaSuccessivoOFine() {
-        if (numEs < giochiDaLanciare.size()-1) {
-            Intent i = new Intent(getApplicationContext(), FineGioco.class);
+        if (numEs <= 7){
+            Intent i = new Intent(this, ActivityGiocoStoGioIng.class);
             i.putExtra("Indice", numEs+1);
+            i.putExtra(MATERIA, materia);
             i.putExtra("errori", errori);
             i.putExtra("record", record);
             startActivity(i);
-        } else fine();
+        }else if (numEs >7){
+            Intent i = new Intent(getApplicationContext(), FineGioco.class);
+            i.putExtra("errori", errori);
+            i.putExtra("record", record);
+            startActivity(i);
+        }
     }
 
-    public void fine(){
+    /*public void fine(){
         Intent i = new Intent(getApplicationContext(), FineGioco.class);
         i.putExtra("errori", errori);
         i.putExtra("record", record);
-    }
+    }*/
 
     private Integer getRandomInt(int max) {
         int n = ((int) Math.round(Math.random() * max) % max);

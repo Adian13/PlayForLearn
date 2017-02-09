@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 
 
-public class Gioco_StoGeoIng {
+public class Gioco_StoGeoIng extends AppCompatActivity{
 
     public String soluzione,opzione1, opzione2, opzione3;
     public Integer immagine;

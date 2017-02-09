@@ -171,13 +171,30 @@ public class Games extends AppCompatActivity {
                         image2.setBackgroundColor(Color.BLUE);
                         ImageView image3 = (ImageView) rootView.findViewById(R.id.image3);
                         image3.setBackgroundColor(Color.YELLOW);
-                    }else if(materia.compareTo(STORIA)==0){
+                    }else if((materia.compareTo(STORIA)==0)||(materia.compareTo(INGLESE)==0)||(materia.compareTo(GEOGRAFIA)==0)){
                         ImageView image0 = (ImageView) rootView.findViewById(R.id.image0);
                         image0.setBackgroundColor(Color.RED);
                         image0.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 Intent i= new Intent(getContext(), ActivityGiocoStoGioIng.class);
+                                i.putExtra(MATERIA, materia);
+                                startActivity(i);
+                            }
+                        });
+                        ImageView image1 = (ImageView) rootView.findViewById(R.id.image1);
+                        image1.setBackgroundColor(Color.BLACK);
+                        ImageView image2 = (ImageView) rootView.findViewById(R.id.image2);
+                        image2.setBackgroundColor(Color.GRAY);
+                        ImageView image3 = (ImageView) rootView.findViewById(R.id.image3);
+                        image3.setBackgroundColor(Color.WHITE);
+                    }else if (materia.compareTo(MATEMATICA)==0){
+                        ImageView image0 = (ImageView) rootView.findViewById(R.id.image0);
+                        image0.setBackgroundColor(Color.RED);
+                        image0.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent i= new Intent(getContext(), DolceMatematica.class);
                                 startActivity(i);
                             }
                         });
@@ -188,6 +205,8 @@ public class Games extends AppCompatActivity {
                         ImageView image3 = (ImageView) rootView.findViewById(R.id.image3);
                         image3.setBackgroundColor(Color.WHITE);
                     }
+                case 1:break;
+                case 2:break;
             }
 
             /*GridView gvGiochi = (GridView) rootView.findViewById(R.id.gvGiochi);

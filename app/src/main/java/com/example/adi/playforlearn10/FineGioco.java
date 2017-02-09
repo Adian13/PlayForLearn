@@ -16,11 +16,12 @@ public class FineGioco extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fine_gioco);
-        //errori= getIntent().getIntExtra("errori", 0);
-        //record= getIntent().getIntExtra("record", 0);
+        errori= getIntent().getIntExtra("errori", 0);
+        record= getIntent().getIntExtra("record", 0);
         txErr= (TextView)findViewById(R.id.txerrori);
-        txErr.setText("errori");
+        //txErr.setText("errori");
+        txErr.setText(errori+"");
         txRec= (TextView)findViewById(R.id.record);
-        txRec.setText("record");
+        txRec.setText(record+"");
     }
 }
