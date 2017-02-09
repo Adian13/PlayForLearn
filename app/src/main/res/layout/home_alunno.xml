@@ -80,14 +80,14 @@
             android:layout_height="100dp"
             android:text="Top10"
             android:id="@+id/btTop10"
-            android:background="#00000000"
-            android:src="@drawable/record_top10"/>
+            android:background="@color/colorAccentStrong"
+            android:src="@drawable/coppa"/>
         <ImageButton
             android:layout_width="100dp"
             android:id="@+id/myRecord"
             android:background="#00000000"
             android:layout_height="100dp"
-            android:src="@drawable/record_personali"
+            android:src="@drawable/medaglia"
             android:text="MyRecord"/>
     </LinearLayout>
 
