@@ -2781,7 +2781,7 @@ containing a value of this type.
         public static final int common_plus_signin_btn_text_light_focused=0x7f020085;
         public static final int common_plus_signin_btn_text_light_normal=0x7f020086;
         public static final int common_plus_signin_btn_text_light_pressed=0x7f020087;
-        public static final int coppa=0x7f020088;
+        public static final int coppa_ida=0x7f020088;
         public static final int creatorb2=0x7f020089;
         public static final int darenome_casa_lampada=0x7f02008a;
         public static final int darenome_casa_letto=0x7f02008b;
@@ -2801,7 +2801,7 @@ containing a value of this type.
         public static final int logo=0x7f020099;
         public static final int mare=0x7f02009a;
         public static final int matematica_icona=0x7f02009b;
-        public static final int medaglia=0x7f02009c;
+        public static final int medaglia_ida=0x7f02009c;
         public static final int montagna=0x7f02009d;
         public static final int navigation_empty_icon=0x7f02009e;
         public static final int notification_action_background=0x7f02009f;

@@ -1,5 +1,6 @@
 package com.example.adi.playforlearn10;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,5 +24,13 @@ public class FineGioco extends AppCompatActivity{
         txErr.setText(errori+"");
         txRec= (TextView)findViewById(R.id.record);
         txRec.setText(record+"");
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i= new Intent(getApplicationContext(), HomeAlunno.class);
+        startActivity(i);
+        finish();
     }
 }

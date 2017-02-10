@@ -11,10 +11,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import static com.example.adi.playforlearn10.HomeAlunno.GEOGRAFIA;
 import static com.example.adi.playforlearn10.HomeAlunno.INGLESE;
+import static com.example.adi.playforlearn10.HomeAlunno.ITALIANO;
+import static com.example.adi.playforlearn10.HomeAlunno.MATEMATICA;
 import static com.example.adi.playforlearn10.HomeAlunno.MATERIA;
 import static com.example.adi.playforlearn10.HomeAlunno.PRIMA;
 import static com.example.adi.playforlearn10.HomeAlunno.STORIA;
@@ -23,7 +26,7 @@ import static com.example.adi.playforlearn10.HomeAlunno.STORIA;
  * Created by Adi on 18/01/2017.
  */
 
-public class ActivityGiocoStoGioIng extends AppCompatActivity{
+public class ActivityGiocoStoGioIng extends AppCompatActivity implements Serializable{
     private String nome, materia, classe;
     int errori, numEs, record;
     ArrayList<Gioco_StoGeoIng> giochiDaLanciare;
@@ -131,7 +134,7 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity{
             Button bt= (Button)v;
             checkSoluzione(giochiDaLanciare.get(numEs),bt.getText().toString());
            // numEs++;
-            avviaSuccessivoOFine();
+            //avviaSuccessivoOFine();
         }
     }
     //TODO controllo su quale layout caricare
@@ -155,6 +158,7 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity{
             i.putExtra("record", record);
             startActivity(i);
         }else if (numEs >7){
+            salvaRecord(record);
             Intent i = new Intent(getApplicationContext(), FineGioco.class);
             i.putExtra("errori", errori);
             i.putExtra("record", record);
@@ -174,4 +178,28 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity{
         return n >= 0 ? n : max - 1;
     }
 
+    public void salvaRecord(int record){
+        //TODO salvataggio
+        /**
+         * salvo il valore del record alla fine della giocata e lo salvo sul db
+         */
+        switch (materia){
+            case ITALIANO:
+                RecordPersonali.recorditaliano.add(record);
+                break;
+            case MATEMATICA:
+                RecordPersonali.recordmatematica.add(record);
+                break;
+            case  INGLESE:
+                RecordPersonali.recordinglese.add(record);
+                break;
+            case STORIA:
+                RecordPersonali.recordstoria.add(record);
+                break;
+            case GEOGRAFIA:
+                RecordPersonali.recordgeografia.add(record);
+                break;
+        }
+
+    }
 }
