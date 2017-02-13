@@ -31,16 +31,17 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".HomeAlunno" />
-        <activity android:name=".AccountAlunno" />
-        <activity android:name=".DolceMatematica" />
+        <activity android:name=".Alunno.HomeAlunno" />
+        <activity android:name=".Alunno.AccountAlunno" />
+        <activity android:name=".Giochi.DolceMatematica" />
         <activity android:name=".Games"/>
-        <activity android:name=".FineGioco"/>
-        <activity android:name=".RecordPersonali"/>
-        <activity android:name=".ActivityGiocoStoGioIng"/>
-        <activity android:name=".QuizActivity"/>
-        <activity android:name=".ResultActivity"/>
-        <activity android:name=".RecordTop10"/>
+        <activity android:name=".Giochi.Suggerimento"/>
+        <activity android:name=".Giochi.FineGioco"/>
+        <activity android:name=".Record.RecordPersonali"/>
+        <activity android:name=".Giochi.ActivityGiocoStoGioIng"/>
+        <activity android:name=".Giochi.QuizActivity"/>
+        <activity android:name=".Giochi.ResultActivity"/>
+        <activity android:name=".Record.RecordTop10"/>
         <!--  <activity
             android:name=".Games"
             android:label="@string/title_activity_games"

@@ -1,8 +1,8 @@
-package com.example.adi.playforlearn10;
+/*package com.example.adi.playforlearn10;
 
 /**
  * Created by Adi on 23/01/2017.
- */
+
         import android.net.wifi.WifiConfiguration;
         import android.os.AsyncTask;
         import android.support.v7.app.AppCompatActivity;
@@ -119,3 +119,4 @@ public class Connect extends AppCompatActivity {
 
     }
 }
+*/

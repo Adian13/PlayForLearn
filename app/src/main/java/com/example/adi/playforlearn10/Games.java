@@ -3,47 +3,36 @@ package com.example.adi.playforlearn10;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
+import com.example.adi.playforlearn10.Alunno.HomeAlunno;
+import com.example.adi.playforlearn10.Giochi.ActivityGiocoStoGioIng;
+import com.example.adi.playforlearn10.Giochi.DolceMatematica;
+import com.example.adi.playforlearn10.Giochi.QuizActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.adi.playforlearn10.HomeAlunno.GEOGRAFIA;
-import static com.example.adi.playforlearn10.HomeAlunno.INGLESE;
-import static com.example.adi.playforlearn10.HomeAlunno.ITALIANO;
-import static com.example.adi.playforlearn10.HomeAlunno.MATEMATICA;
-import static com.example.adi.playforlearn10.HomeAlunno.MATERIA;
-import static com.example.adi.playforlearn10.HomeAlunno.STORIA;
-import static com.example.adi.playforlearn10.R.id.center;
-import static com.example.adi.playforlearn10.R.string.storia;
+import static com.example.adi.playforlearn10.Alunno.HomeAlunno.GEOGRAFIA;
+import static com.example.adi.playforlearn10.Alunno.HomeAlunno.INGLESE;
+import static com.example.adi.playforlearn10.Alunno.HomeAlunno.ITALIANO;
+import static com.example.adi.playforlearn10.Alunno.HomeAlunno.MATEMATICA;
+import static com.example.adi.playforlearn10.Alunno.HomeAlunno.MATERIA;
+import static com.example.adi.playforlearn10.Alunno.HomeAlunno.STORIA;
 
 public class Games extends AppCompatActivity {
 
@@ -194,8 +183,10 @@ public class Games extends AppCompatActivity {
                         image0.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent i= new Intent(getContext(), DolceMatematica.class);
+                                Intent i= new Intent(getContext(),ActivityGiocoStoGioIng.class);
+                                i.putExtra(MATERIA, materia);
                                 startActivity(i);
+
                             }
                         });
                         ImageView image1 = (ImageView) rootView.findViewById(R.id.image1);
@@ -205,7 +196,63 @@ public class Games extends AppCompatActivity {
                         ImageView image3 = (ImageView) rootView.findViewById(R.id.image3);
                         image3.setBackgroundColor(Color.WHITE);
                     }
-                case 1:break;
+                    break;
+                case 1:
+                    if(materia.compareTo(ITALIANO) == 0) {
+                        ImageView image0 = (ImageView) rootView.findViewById(R.id.image0);
+                        image0.setBackgroundColor(Color.GREEN);
+                        image0.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                //Intent i= new Intent(getContext(), QuizActivity.class);
+                               // startActivity(i);
+                                Toast.makeText(getContext(), "Work in progress", Toast.LENGTH_LONG);
+                            }
+                        });
+                        ImageView image1 = (ImageView) rootView.findViewById(R.id.image1);
+                        image1.setBackgroundColor(Color.RED);
+                        ImageView image2 = (ImageView) rootView.findViewById(R.id.image2);
+                        image2.setBackgroundColor(Color.BLUE);
+                        ImageView image3 = (ImageView) rootView.findViewById(R.id.image3);
+                        image3.setBackgroundColor(Color.YELLOW);
+                    }else if((materia.compareTo(STORIA)==0)||(materia.compareTo(INGLESE)==0)||(materia.compareTo(GEOGRAFIA)==0)){
+                        ImageView image0 = (ImageView) rootView.findViewById(R.id.image0);
+                        image0.setBackgroundColor(Color.RED);
+                        image0.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                               // Intent i= new Intent(getContext(), ActivityGiocoStoGioIng.class);
+                               // i.putExtra(MATERIA, materia);
+                               // startActivity(i);
+                                Toast.makeText(getContext(), "Work in progress", Toast.LENGTH_LONG);
+                            }
+                        });
+                        ImageView image1 = (ImageView) rootView.findViewById(R.id.image1);
+                        image1.setBackgroundColor(Color.BLACK);
+                        ImageView image2 = (ImageView) rootView.findViewById(R.id.image2);
+                        image2.setBackgroundColor(Color.GRAY);
+                        ImageView image3 = (ImageView) rootView.findViewById(R.id.image3);
+                        image3.setBackgroundColor(Color.WHITE);
+                    }else if (materia.compareTo(MATEMATICA)==0){
+                        ImageView image0 = (ImageView) rootView.findViewById(R.id.image0);
+                        image0.setBackgroundColor(Color.RED);
+                        image0.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent i= new Intent(getContext(),DolceMatematica.class);
+                                i.putExtra(MATERIA, materia);
+                                startActivity(i);
+
+                            }
+                        });
+                        ImageView image1 = (ImageView) rootView.findViewById(R.id.image1);
+                        image1.setBackgroundColor(Color.BLACK);
+                        ImageView image2 = (ImageView) rootView.findViewById(R.id.image2);
+                        image2.setBackgroundColor(Color.GRAY);
+                        ImageView image3 = (ImageView) rootView.findViewById(R.id.image3);
+                        image3.setBackgroundColor(Color.WHITE);
+                    }
+                    break;
                 case 2:break;
             }
 
