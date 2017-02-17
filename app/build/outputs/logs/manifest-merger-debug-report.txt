@@ -1,36 +1,38 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:2:1-66:12
 	package
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:3:5-45
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:4:5-45
 		INJECTED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
 		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
 		INJECTED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:6:5-71
-	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:6:22-68
-uses-permission#android.permission.READ_PROFILE
 ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:7:5-71
 	android:name
 		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:8:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:8:5-72
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:9:5-72
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:8:22-69
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:9:22-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:9:5-66
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:9:22-64
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:10:22-64
 application
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:11:5-49:19
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:12:5-64:19
 MERGED from [com.android.support:design:25.1.0] C:\Users\Adi\PlayForLearn\PlayForLearn\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:25.1.0] C:\Users\Adi\PlayForLearn\PlayForLearn\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.1.0] C:\Users\Adi\PlayForLearn\PlayForLearn\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\AndroidManifest.xml:22:5-20
@@ -45,82 +47,126 @@ MERGED from [com.android.support:support-core-ui:25.1.0] C:\Users\Adi\PlayForLea
 MERGED from [com.android.support:support-core-utils:25.1.0] C:\Users\Adi\PlayForLearn\PlayForLearn\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.1.0] C:\Users\Adi\PlayForLearn\PlayForLearn\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:15:9-41
 	android:supportsRtl
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:16:9-35
 	android:allowBackup
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:13:9-35
 	android:icon
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:14:9-56
 	android:theme
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:16:9-40
-activity#com.example.adi.playforlearn10.LoginActivity
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:17:9-25:20
-	android:label
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:19:13-45
-	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:18:13-42
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:20:13-24:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:21:17-69
-	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:21:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:23:17-77
-	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:17:9-40
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:30:9-32:69
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:22:9-24:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Adi\PlayForLearn\PlayForLearn\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:32:13-66
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:24:13-66
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:31:13-58
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:23:13-58
 activity#com.example.adi.playforlearn10.Alunno.HomeAlunno
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:34:9-55
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:26:9-55
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:34:19-52
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:26:19-52
 activity#com.example.adi.playforlearn10.Alunno.AccountAlunno
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:35:9-58
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:27:9-58
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:35:19-55
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:27:19-55
 activity#com.example.adi.playforlearn10.Giochi.DolceMatematica
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:36:9-60
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:28:9-60
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:36:19-57
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:28:19-57
 activity#com.example.adi.playforlearn10.Games
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:37:9-42
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:29:9-43
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:37:19-40
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:29:19-40
+activity#com.example.adi.playforlearn10.Registrazione
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:30:9-50
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:30:19-48
 activity#com.example.adi.playforlearn10.Giochi.Suggerimento
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:38:9-56
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:31:9-57
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:38:19-54
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:31:19-54
 activity#com.example.adi.playforlearn10.Giochi.FineGioco
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:39:9-53
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:32:9-54
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:39:19-51
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:32:19-51
 activity#com.example.adi.playforlearn10.Record.RecordPersonali
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:40:9-59
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:33:9-60
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:40:19-57
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:33:19-57
 activity#com.example.adi.playforlearn10.Giochi.ActivityGiocoStoGioIng
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:41:9-66
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:34:9-67
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:41:19-64
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:34:19-64
 activity#com.example.adi.playforlearn10.Giochi.QuizActivity
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:42:9-56
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:35:9-57
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:42:19-54
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:35:19-54
 activity#com.example.adi.playforlearn10.Giochi.ResultActivity
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:43:9-58
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:36:9-59
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:43:19-56
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:36:19-56
 activity#com.example.adi.playforlearn10.Record.RecordTop10
-ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:44:9-55
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:37:9-56
 	android:name
-		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:44:19-53
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:37:19-53
+activity#com.example.adi.playforlearn10.Insegnate.HomeMaestra
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:38:9-59
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:38:19-56
+activity#com.example.adi.playforlearn10.Insegnate.AccountMaestra
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:39:9-62
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:39:19-59
+activity#com.example.adi.playforlearn10.RegUtente
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:40:9-47
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:40:19-44
+activity#com.example.adi.playforlearn10.ListaAlunni
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:41:9-58
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:41:19-46
+activity#com.example.adi.playforlearn10.SezioneClassi
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:42:9-60
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:42:19-48
+activity#com.example.adi.playforlearn10.ListaAlunni2
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:43:9-59
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:43:19-47
+activity#com.example.adi.playforlearn10.ListaAlunni3
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:44:9-59
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:44:19-47
+activity#com.example.adi.playforlearn10.ListaAlunni4
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:45:9-59
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:45:19-47
+activity#com.example.adi.playforlearn10.ListaAlunni5
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:46:9-59
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:46:19-47
+activity#com.example.adi.playforlearn10.RegistrazioneMaestra
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:48:9-67
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:48:19-55
+activity#com.example.adi.playforlearn10.LoginActivityRaffaele
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:55:9-63:20
+	android:label
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:56:13-34
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:55:19-56
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:57:9-60:25
+action#android.intent.action.MAIN
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:58:13-64
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:58:21-62
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:59:13-72
+	android:name
+		ADDED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml:59:23-70
 uses-sdk
 INJECTED from C:\Users\Adi\PlayForLearn\PlayForLearn\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.1.0] C:\Users\Adi\PlayForLearn\PlayForLearn\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\AndroidManifest.xml:21:5-23:62

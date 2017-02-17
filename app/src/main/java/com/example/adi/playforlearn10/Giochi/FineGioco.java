@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.adi.playforlearn10.Alunno.HomeAlunno;
 import com.example.adi.playforlearn10.R;
+import com.example.adi.playforlearn10.Record.RecordPersonali;
 
 /**
  * Created by Adi on 18/01/2017.
@@ -27,11 +28,12 @@ public class FineGioco extends AppCompatActivity{
         txErr.setText(errori+"");
         txRec= (TextView)findViewById(R.id.record);
         txRec.setText(record+"");
+        RecordPersonali.aggiornaRecord(getIntent().getStringExtra("MATERIA"),record, getApplicationContext());
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        //super.onBackPressed();
         Intent i= new Intent(getApplicationContext(), HomeAlunno.class);
         startActivity(i);
         finish();

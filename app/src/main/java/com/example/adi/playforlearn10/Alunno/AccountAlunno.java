@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.adi.playforlearn10.LoginActivity;
+import com.example.adi.playforlearn10.LoginActivityAndroidIda;
 import com.example.adi.playforlearn10.R;
 
 public class AccountAlunno extends AppCompatActivity {
@@ -25,10 +25,13 @@ public class AccountAlunno extends AppCompatActivity {
         btLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                Intent i = new Intent(getApplicationContext(), LoginActivityAndroidIda.class);
                 startActivity(i);
                 finish();
             }
         });
+        //TODO Grafica
+        //sharedpreference da inserire
+
     }
 }

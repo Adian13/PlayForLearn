@@ -100,7 +100,7 @@ public class DolceMatematica extends AppCompatActivity {
         aggiornaQuesito();
     }
 
-    public void onClickRisposta(View v) throws Exception {
+    private void onClickRisposta(View v) throws Exception {
         total_answers++;
         Button b = (Button) v;
         Quiz q = arrayDomande[quesito_corrente];
@@ -129,7 +129,7 @@ public class DolceMatematica extends AppCompatActivity {
         aggiornaQuesito();
     }
 
-    public void onClickSuggerimento(View v) {
+    private void onClickSuggerimento(View v) {
         Intent i = new Intent(getApplicationContext(),Suggerimento.class);
         i.putExtra("TESTO_QUESITO", arrayDomande[quesito_corrente].getTesto());
         i.putExtra("RISPOSTA_QUESITO", arrayDomande[quesito_corrente].getRisposta());

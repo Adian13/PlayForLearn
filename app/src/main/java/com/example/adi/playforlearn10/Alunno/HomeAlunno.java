@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.adi.playforlearn10.Games;
-import com.example.adi.playforlearn10.LoginActivity;
+import com.example.adi.playforlearn10.LoginActivityAndroidIda;
 import com.example.adi.playforlearn10.R;
 import com.example.adi.playforlearn10.Record.RecordPersonali;
 import com.example.adi.playforlearn10.Record.RecordTop10;
@@ -18,6 +18,7 @@ import com.example.adi.playforlearn10.Record.RecordTop10;
 //import static com.example.adi.playforlearn10.Creatore.giochiDaLanciare;
 
 public class HomeAlunno extends AppCompatActivity {
+    // TODO credo che queste variabili debbano stare in un'altra classe
     public static final String PRIMA = "PRIMA";
     public static final String ITALIANO = "ITALIANO";
     public static final String STORIA = "STORIA";
@@ -31,7 +32,6 @@ public class HomeAlunno extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_alunno);
-
         getSupportActionBar().setTitle("Home alunno");
 
         // Bind buttons
@@ -104,7 +104,7 @@ public class HomeAlunno extends AppCompatActivity {
         builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                startActivity(new Intent(getApplicationContext(),LoginActivityAndroidIda.class));
                 finish();
             }
         });

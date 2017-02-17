@@ -68,7 +68,7 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addQuestion(Domande quest) {
+    private void addQuestion(Domande quest) {
 
         ContentValues values = new ContentValues();
         values.put(KEY_QUES, quest.getDomanda());

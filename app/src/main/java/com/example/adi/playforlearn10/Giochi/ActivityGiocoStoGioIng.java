@@ -75,25 +75,29 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.pietra, "pietra","animale", "penna", "pingu" ));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.montagna, "Montagna", "heidi", "capre", "fiume"));
         }
-        else if(materia.compareTo(INGLESE)==0) {
+        else if(materia.compareTo(INGLESE)==0){
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "flowers", "animale", "penna", "pingu"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sole, "Sun", "Sardegna", "Sardina", "mamma"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.stelle, "Stars", "mappa", "cappa", "mamma"));
-        }
-        else if(materia.compareTo(MATEMATICA)==0){
+
+        } else if(materia.compareTo(MATEMATICA)==0){
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.images, "15", "a", "d", "casa"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.calcoli, "55", "125", "60", "kiwi"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_ciclisti, "C G F", "125", "nessuna", "kiwi"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_sciatori, "A B H", "125", "nessuna", "kiwi"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_sciatori, "A B H", "125", "nessuna", "kiwi"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_cavallo, "C I J", "ciuccio", "galoppiamo", "nessuno"));
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sfere, "7", "appari drago", "1", "5"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sfere, "7", "appari drago", "1", "5"));
 
         }
-
 
         gioco= giochiDaLanciare.get(numEs);
         ArrayList<String> opzioni = new ArrayList<String>(4);
@@ -163,13 +167,15 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
             i.putExtra("errori", errori);
             i.putExtra("record", record);
             startActivity(i);
+            finish();
         }else if (numEs >7){
-            salvaRecord(record);
+            //salvaRecord(record);
             Intent i = new Intent(getApplicationContext(), FineGioco.class);
-
             i.putExtra("errori", errori);
             i.putExtra("record", record);
+            i.putExtra("MATERIA",materia);
             startActivity(i);
+            finish();
         }
     }
 
@@ -189,8 +195,8 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
         //TODO salvataggio
         /**
          * salvo il valore del record alla fine della giocata e lo salvo sul db
-
-        switch (materia){
+         */
+        /*switch (materia){
             case ITALIANO:
                 RecordPersonali.recorditaliano.add(record);
                 break;

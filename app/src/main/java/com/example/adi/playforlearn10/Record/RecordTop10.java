@@ -1,6 +1,7 @@
 package com.example.adi.playforlearn10.Record;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,7 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.adi.playforlearn10.LoginActivity;
+import com.example.adi.playforlearn10.Alunno.HomeAlunno;
+import com.example.adi.playforlearn10.LoginActivityAndroidIda;
 import com.example.adi.playforlearn10.R;
 
 import org.json.JSONException;
@@ -51,7 +53,7 @@ public class RecordTop10 extends AppCompatActivity {
             protected Object doInBackground(Object... params) {
                 String nome, gioco, record;
                 try {
-                    String ip = LoginActivity.INDIRIZZO;
+                    String ip = LoginActivityAndroidIda.INDIRIZZO;
                     int porta = 80;
                     String nomeFile = "webservice/getTop10.php";
                     URL url = new URL("http", ip, porta, nomeFile);
@@ -102,6 +104,12 @@ public class RecordTop10 extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), HomeAlunno.class));
+        finish();
+    }
+
     private class Record{
         String nome, gioco, punteggio;
 
@@ -136,3 +144,4 @@ public class RecordTop10 extends AppCompatActivity {
         }
     }
 }
+//todo javadoc
