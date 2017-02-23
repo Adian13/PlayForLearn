@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Display;
 import android.view.Surface;
 import android.view.View;
@@ -13,6 +14,10 @@ import android.widget.Toast;
 
 import com.example.adi.playforlearn10.R;
 
+/**
+ *  DolceMatematica è la classe che contiene un gioco di matematica del sistema PlayForLearn. E' formato da una serie di
+ *  domande che verranno poste all'utente, e dovrà rispondere correttamente premendo se la risposta è vera o falsa!
+ */
 public class DolceMatematica extends AppCompatActivity {
 
     private TextView numeroQuesito;
@@ -32,6 +37,9 @@ public class DolceMatematica extends AppCompatActivity {
             new Quiz("Il risultato di 200-100 = 100", true),
             new Quiz("Il risultato di 2x10 = 105", false),
             new Quiz("Il risultato di 40*4 = 160", true),
+            new Quiz("Il risultato di 18*3 = 54", true),
+            new Quiz("Il risultato di 40-18 = 22", true),
+            new Quiz("Il risultato di 25:5 = 4", false),
     };
 
     private final int NUM_QUESITI = arrayDomande.length;
@@ -57,14 +65,15 @@ public class DolceMatematica extends AppCompatActivity {
         getSupportActionBar().setTitle("Dolce Matematica");
         Display display = getWindowManager().getDefaultDisplay();
 
+
         int rotation = display.getRotation();
         switch(rotation) {
             case Surface.ROTATION_90:
                 setContentView(R.layout.activity_dolce_matematica);
                 break;
-           // case Surface.ROTATION_0:
+            // case Surface.ROTATION_0:
 
-             //   break;
+            //   break;
             /*case Surface.ROTATION_180:
                 Intent c= new Intent(getApplicationContext(),DolceMatematica1.class);
                 startActivity(c);
@@ -88,10 +97,16 @@ public class DolceMatematica extends AppCompatActivity {
 
     }
 
+    /**
+     * Metodo onClickAltroQuesito rappresenta lo spostamento da un quesito all'altro con un semplice click sui due
+     * pulsante Prev e Succ.
+     * @param v è il pulsante riferito a prev o succ.
+     * @throws Exception
+     */
     public void onClickAltroQuesito(View v) throws Exception {
         Button b = (Button) v;
         switch(b.getId()) {
-            case R.id.buttonPrev: if(quesito_corrente==0) quesito_corrente=+5; else
+            case R.id.buttonPrev: if(quesito_corrente==0) quesito_corrente=+8; else
                 quesito_corrente--; break;
             case R.id.buttonSucc: quesito_corrente++; break;
             default: throw new Exception("Should not be here (prev/succ)");
@@ -100,36 +115,66 @@ public class DolceMatematica extends AppCompatActivity {
         aggiornaQuesito();
     }
 
-    private void onClickRisposta(View v) throws Exception {
+    /**
+     * Metodo onClickRisposta rappresenta la risposta data dall'utente e la confronta con la risposta salvata. Se sono uguali
+     * restituisce:"Giusto", altrimenti restituisce:"Sbagliato".
+     * @param v rappresenta i due pulsanti Vero-Falso.
+     * @throws Exception
+     */
+
+    public void onClickRisposta(View v) throws Exception {
         total_answers++;
         Button b = (Button) v;
         Quiz q = arrayDomande[quesito_corrente];
         boolean risposta_corretta = q.getRisposta();
         boolean risposta;
         String str;
-        switch(b.getId()) {
-            case R.id.buttonTrue: risposta = true; break;
-            case R.id.buttonFalse: risposta = false; break;
-            default: throw new Exception("Should not be here (true/false)");
+        switch (b.getId()) {
+            case R.id.buttonTrue:
+                risposta = true;
+                break;
+            case R.id.buttonFalse:
+                risposta = false;
+                break;
+            default:
+                throw new Exception("Should not be here (true/false)");
         }
-        str = (risposta == risposta_corretta)  ? "Giusto!!!" : "Sbagliato.";
-        Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();;
+        str = (risposta == risposta_corretta) ? "Giusto!!!" : "Sbagliato.";
+        Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
+        ;
 
-        if (risposta == risposta_corretta){
+        if (risposta == risposta_corretta) {
 
             valid_correct_answers++;
-        }
-        else {
+        } else {
             non_valid_correct_answers++;
         }
         aggiornaQuesito();
 
         quesito_corrente++;
         quesito_corrente = quesito_corrente % NUM_QUESITI;
+
+        if (quesito_corrente < 7) {
+            Log.d("DEBUG_num", String.valueOf(quesito_corrente));
+            Log.d("DEBUG_valori", String.valueOf(arrayDomande.length));
+        }
+        else{
+            Intent d = new Intent(getApplicationContext(), ResultActivity.class);
+            d.putExtra("score",valid_correct_answers);
+            d.putExtra("activity1","DolceMatematica");
+            startActivity(d);
+            finish();
+        }
+
         aggiornaQuesito();
     }
 
-    private void onClickSuggerimento(View v) {
+    /**
+     *Metodo onClickSuggerimento rappresenta una chiamata ad una nuova classe : "Suggerimento.class" che in base alla domanda che
+     * l'utente deve rispondere, può usufluire di un suggerimento.
+     * @param v pulsante :"Suggerimento".
+     */
+    public void onClickSuggerimento(View v) {
         Intent i = new Intent(getApplicationContext(),Suggerimento.class);
         i.putExtra("TESTO_QUESITO", arrayDomande[quesito_corrente].getTesto());
         i.putExtra("RISPOSTA_QUESITO", arrayDomande[quesito_corrente].getRisposta());
