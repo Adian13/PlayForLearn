@@ -50,8 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/frameSpacing"
             android:id="@+id/testo1"
-            android:textSize="20dp"
-            android:text="Indica se ti è piaciuto il gioco "/>
+            android:textSize="20dp" />
 
         <RatingBar
             android:id="@+id/ratingBar1"
@@ -59,8 +58,7 @@
             android:layout_height="wrap_content"
             android:numStars="5"
             android:stepSize="1.0"
-            android:rating="0.0"
-            android:layout_below="@id/testo1" />
+            android:rating="0.0" />
 
 
     </LinearLayout>

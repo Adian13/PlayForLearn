@@ -96,7 +96,7 @@
         android:layout_marginStart="5dp"
         android:paddingTop="8dp"
         android:layout_height="32dp"
-        android:text="new"
+        android:text="@string/str_next"
         android:onClick="onClickAltroQuesito"
         android:textAlignment="center"
         android:background="@drawable/bgr_backnew"

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.adi.playforlearn10.Alunno.HomeAlunno;
 import com.example.adi.playforlearn10.R;
 import com.example.adi.playforlearn10.Record.RecordPersonali;
 
@@ -162,7 +163,8 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
     public void avviaSuccessivoOFine() {
         if (numEs <= 7){
             Intent i = new Intent(this, ActivityGiocoStoGioIng.class);
-            i.putExtra("Indice", numEs+1);
+            numEs++;
+            i.putExtra("Indice", numEs);
             i.putExtra(MATERIA, materia);
             i.putExtra("errori", errori);
             i.putExtra("record", record);
@@ -174,6 +176,7 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
             i.putExtra("errori", errori);
             i.putExtra("record", record);
             i.putExtra("MATERIA",materia);
+            i.putExtra("activity", "ActivityGiocoStoGioIng");
             startActivity(i);
             finish();
         }
@@ -189,6 +192,14 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
         int n = ((int) Math.round(Math.random() * max) % max);
         if (n >= 0) Log.d("DEBUG", "Il numero casuale scelto è " + n);
         return n >= 0 ? n : max - 1;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i= new Intent(getApplicationContext(), HomeAlunno.class);
+        startActivity(i);
+        finish();
     }
 
     public void salvaRecord(int record){

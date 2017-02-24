@@ -150,9 +150,9 @@ public class DolceMatematica extends AppCompatActivity {
             Log.d("DEBUG_valori", String.valueOf(arrayDomande.length));
         }
         else{
-            Intent d = new Intent(getApplicationContext(), ResultActivity.class);
-            d.putExtra("score",valid_correct_answers);
-            d.putExtra("activity1","DolceMatematica");
+            Intent d = new Intent(getApplicationContext(), FineGioco.class);
+            d.putExtra("record",valid_correct_answers);
+            d.putExtra("activity","DolceMatematica");
             startActivity(d);
             finish();
         }

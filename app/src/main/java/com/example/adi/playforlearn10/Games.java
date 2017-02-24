@@ -23,7 +23,7 @@ import android.widget.Toast;
 import com.example.adi.playforlearn10.Alunno.HomeAlunno;
 import com.example.adi.playforlearn10.Giochi.ActivityGiocoStoGioIng;
 import com.example.adi.playforlearn10.Giochi.DolceMatematica;
-import com.example.adi.playforlearn10.Giochi.QuizActivity;
+import com.example.adi.playforlearn10.Giochi.QuizActivityItaliano;
 
 import java.util.List;
 
@@ -150,7 +150,7 @@ public class Games extends AppCompatActivity {
                         image0.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent i= new Intent(getContext(), QuizActivity.class);
+                                Intent i= new Intent(getContext(), QuizActivityItaliano.class);
                                 startActivity(i);
                             }
                         });

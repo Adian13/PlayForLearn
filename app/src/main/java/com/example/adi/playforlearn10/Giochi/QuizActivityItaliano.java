@@ -19,7 +19,7 @@ import java.util.List;
  * QuizActivity è una classe che rappresenta il gioco Quiz_italiano dove vengono visualizzati i vari pulsanti di scelta
  * fra le varie opzioni offerte. Il gioco terminerà quando l'alunno avrà risposto a tutte le domande.
  */
-public class QuizActivity extends Activity {
+public class QuizActivityItaliano extends Activity {
     List<Domande> lista;
     int score=0;
     int qid=0;
@@ -56,10 +56,10 @@ public class QuizActivity extends Activity {
                     currentQ=lista.get(qid);
                     setQuestionView();
                 }else{
-                    Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
-                    Bundle b = new Bundle();
-                    b.putInt("score", score);
-                    intent.putExtras(b);
+                    Intent intent = new Intent(QuizActivityItaliano.this,FineGioco.class);
+                    intent.putExtra("record", score);
+                    intent.putExtra("MATERIA", "ITALIANO");
+                    intent.putExtra("activity", "QuizActivityItaliano");
                     startActivity(intent);
                     finish();
                 }
