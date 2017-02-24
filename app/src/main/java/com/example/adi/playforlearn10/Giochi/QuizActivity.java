@@ -15,6 +15,10 @@ import android.widget.TextView;
 import com.example.adi.playforlearn10.R;
 
 import java.util.List;
+/**
+ * QuizActivity è una classe che rappresenta il gioco Quiz_italiano dove vengono visualizzati i vari pulsanti di scelta
+ * fra le varie opzioni offerte. Il gioco terminerà quando l'alunno avrà risposto a tutte le domande.
+ */
 public class QuizActivity extends Activity {
     List<Domande> lista;
     int score=0;
@@ -64,12 +68,10 @@ public class QuizActivity extends Activity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.activity_quiz, menu);
         return true;
     }
-    private void setQuestionView()
-    {
+    private void setQuestionView(){
         txtQuestion.setText(currentQ.getDomanda());
         rda.setText(currentQ.getOPTA());
         rdb.setText(currentQ.getOPTB());

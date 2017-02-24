@@ -13,7 +13,10 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.adi.playforlearn10.R;
-
+/**
+        * ResultActivity è una classe che rappresenta un semplice layout con il risultato di un singolo utente dopo aver giocato
+        * l'intera partita. Verranno conteggiate le risposte esatte e salvato il record nel database.
+        */
 public class ResultActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

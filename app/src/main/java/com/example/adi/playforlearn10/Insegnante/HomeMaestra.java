@@ -1,4 +1,4 @@
-package com.example.adi.playforlearn10.Insegnate;
+package com.example.adi.playforlearn10.Insegnante;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,9 +47,9 @@ public class HomeMaestra extends AppCompatActivity {
     }
 
     public void account(View v){
-        Intent i = new Intent(getApplicationContext(),AccountMaestra.class);
+        /*Intent i = new Intent(getApplicationContext(),AccountMaestra.class);
         startActivity(i);
-        finish();
+        finish();*/
     }
 
     public void notifica(View v){

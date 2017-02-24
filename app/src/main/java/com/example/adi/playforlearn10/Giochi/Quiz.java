@@ -1,7 +1,8 @@
 package com.example.adi.playforlearn10.Giochi;
-
 /**
- * Created by raffaeledellaporta on 19/12/2016.
+ * Quiz è una classe che contiene le domande inerenti a moltiplicazioni, divisioni , addizioni o sottrazioni che verranno
+ * fatte agli utenti che giocano. Ha vari metodi get e set che restituiscono il testo, la risposta che è un boolean per dire
+ * se la risposta è vera o falsa.
  */
 public class Quiz {
     private String testo;

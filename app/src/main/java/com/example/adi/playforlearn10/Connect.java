@@ -1,4 +1,4 @@
-/*package com.example.adi.playforlearn10;
+package com.example.adi.playforlearn10;/*package com.example.adi.playforlearn10;
 
 /**
  * Created by Adi on 23/01/2017.

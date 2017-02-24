@@ -35,8 +35,7 @@
         <activity android:name=".Giochi.QuizActivity" />
         <activity android:name=".Giochi.ResultActivity" />
         <activity android:name=".Record.RecordTop10" />
-        <activity android:name=".Insegnate.HomeMaestra" />
-        <activity android:name=".Insegnate.AccountMaestra" />
+        <activity android:name=".Insegnante.HomeMaestra" />
         <activity android:name=".RegUtente" />
         <activity android:name=".ListaAlunni"></activity>
         <activity android:name=".SezioneClassi"></activity>
@@ -45,15 +44,13 @@
         <activity android:name=".ListaAlunni4"></activity>
         <activity android:name=".ListaAlunni5"></activity>
 
-        <activity android:name=".RegistrazioneMaestra"></activity>
         <!--
               <activity
             android:name=".Games"
             android:label="@string/title_activity_games"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         -->
-        <activity android:name=".LoginActivityRaffaele"
-            android:label="LOGIN">
+        <activity android:name=".LoginActivityDaniele">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>

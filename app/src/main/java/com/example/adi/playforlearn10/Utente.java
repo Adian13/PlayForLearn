@@ -1,10 +1,23 @@
 package com.example.adi.playforlearn10;
 
+import java.io.Serializable;
+
 /**
  * Created by Adi on 17/02/2017.
  */
 
-public class Utente {
+
+public class Utente implements Serializable{
+    /**
+     * Crea un oggetto utente con
+     * @param id chiave identificativa dell'utente
+     * @param nome nome dell'utente
+     * @param cognome cognome dell'utente
+     * @param password password dell'utente
+     * @param username username dell'utente
+     * @return Utente
+     */
+
     String id, nome, cognome, password, username;
 
     public Utente(String id, String nome, String cognome, String password, String username) {
@@ -56,4 +69,3 @@ public class Utente {
     }
 }
 
-//todo javadoc

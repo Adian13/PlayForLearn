@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.adi.playforlearn10.Insegnate.AccountMaestra;
+//import com.example.adi.playforlearn10.Insegnante.AccountMaestra;
 
 import java.util.HashMap;
 
@@ -115,8 +115,8 @@ public class RegUtente extends AppCompatActivity implements View.OnClickListener
                 super.onPostExecute(s);
                  loading.dismiss();
                     Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(RegUtente.this, AccountMaestra.class);
-                    startActivity(intent);
+                    //Intent intent = new Intent(RegUtente.this, AccountMaestra.class);
+                    //startActivity(intent);
                     finish();
                 }
 

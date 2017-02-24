@@ -3,7 +3,6 @@ package com.example.adi.playforlearn10;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -29,9 +28,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.adi.playforlearn10.Alunno.HomeAlunno;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,13 +35,10 @@ import java.util.List;
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
- * A login screen that offers login via username/password.
+ * A login screen that offers login via email/password.
  */
-public class LoginActivityAndroidIda extends AppCompatActivity implements LoaderCallbacks<Cursor> {
-    public static final String INDIRIZZO ="172.19.43.188";
-    Utente currUser;
-    String password, username;
-    boolean esiste, valid, empty;
+public class LoginActivityDanieleProva extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -72,7 +65,7 @@ public class LoginActivityAndroidIda extends AppCompatActivity implements Loader
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login2);
+        setContentView(R.layout.activity_login_daniele_prova);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -89,36 +82,16 @@ public class LoginActivityAndroidIda extends AppCompatActivity implements Loader
             }
         });
 
-        final Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*username=mEmailView.getText().toString();
-                password=mPasswordView.getText().toString();
-                Log.d("DEBUGLOGIN", "username: "+ mEmailView.getText().toString());
-                Log.d("DEBUGLOGIN", "password: "+ mPasswordView.getText().toString());*/
-
                 attemptLogin();
             }
         });
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-
-        Button btRegis= (Button)findViewById(R.id.register);
-        btRegis.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registrati();
-            }
-        });
-    }
-
-    //operazioni ok
-    public void registrati(){
-        Intent i = new Intent(getApplicationContext(), Registrazione.class);
-        startActivity(i);
-        finish();
     }
 
     private void populateAutoComplete() {
@@ -163,9 +136,7 @@ public class LoginActivityAndroidIda extends AppCompatActivity implements Loader
             }
         }
     }
-    public void login(){
-        Intent i = new Intent(getApplicationContext(), HomeAlunno.class);
-    }
+
 
     /**
      * Attempts to sign in or register the account specified by the login form.
@@ -182,80 +153,51 @@ public class LoginActivityAndroidIda extends AppCompatActivity implements Loader
         mPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
-        String username = mEmailView.getText().toString();
+        String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
+
+        // Check for a valid password, if the user entered one.
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+            mPasswordView.setError(getString(R.string.error_invalid_password));
+            focusView = mPasswordView;
+            cancel = true;
+        }
+
         // Check for a valid email address.
-        if (TextUtils.isEmpty(username)) {
+        if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if(!isUsernameValid(username)) {
+        } else if (!isEmailValid(email)) {
             mEmailView.setError(getString(R.string.error_invalid_email));
-            //Log.d("DEBUGLOGIN", "sto confrontando: " +username+ " con: "+ currUser.getUsername());
             focusView = mEmailView;
             cancel = true;
-        }else if(isUsernameValid(username)){
-            //Log.d("DEBUGLOGIN", "sono giuste sto confrontando: " +username+ " con: "+ currUser.getUsername());
-            if(isPasswordValid(password)){
-                login();
-            }
         }
-
-
-
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
             focusView.requestFocus();
         } else {
-            login();
-            // Show a progress spinner, and kick of a background task to
+            // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            mAuthTask = new UserLoginTask(username, password);
+            mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
     }
 
-    private boolean isUsernameValid(String email) {
+    private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        if (username != null) {
-            esiste = false;
-            for(Utente u : DataLocale.getUtenti()){
-                if(u.getUsername().compareToIgnoreCase(email) == 0){
-                    Toast.makeText(this, "Ok username", Toast.LENGTH_SHORT).show();
-                    esiste = true;
-                    break;
-                }
-            }
-            /*for (int i = 0; i < DataLocale.utenti.size(); i++) {
-                if (DataLocale.utenti.get(i).getUsername().compareTo(username) == 0) {
-                    currUser = DataLocale.utenti.get(i);
-                    esiste = true;
-                } else esiste = false;
-            }*/
-        }
-        return esiste;
+        return email.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        valid = false;
-        for(Utente u : DataLocale.getUtenti()){
-            if(u.getPassword().compareTo(password) == 0){
-                Toast.makeText(this, "Ok Password", Toast.LENGTH_SHORT).show();
-                valid = true;
-                break;
-            }
-        }
-        /*if(currUser.getPassword().compareTo(password)==0){
-            valid= true;
-        }else valid=false;*/
-        return valid;
+        return password.length() > 4;
     }
 
     /**
@@ -331,7 +273,7 @@ public class LoginActivityAndroidIda extends AppCompatActivity implements Loader
     private void addEmailsToAutoComplete(List<String> emailAddressCollection) {
         //Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
         ArrayAdapter<String> adapter =
-                new ArrayAdapter<>(LoginActivityAndroidIda.this,
+                new ArrayAdapter<>(LoginActivityDanieleProva.this,
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
         mEmailView.setAdapter(adapter);

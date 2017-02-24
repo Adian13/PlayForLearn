@@ -48,11 +48,7 @@ public class DolceMatematica extends AppCompatActivity {
 
     private void aggiornaQuesito() {
         int n = quesito_corrente+1;
-        numeroQuesito.setText("Quesito n. "+n);
         testoQuesito.setText(arrayDomande[quesito_corrente].getTesto());
-        risposteCorretteValide.setText("Risposte corrette valide: "+valid_correct_answers);
-        risposteErrate.setText("Risposte corrette non valide: "+non_valid_correct_answers);
-        risposteTotali.setText("Risposte totali: " + total_answers);
     }
 
     @Override
@@ -90,15 +86,11 @@ public class DolceMatematica extends AppCompatActivity {
 
         numeroQuesito = (TextView) findViewById(R.id.numeroQuesito);
         testoQuesito = (TextView) findViewById(R.id.testoQuesito);
-        risposteCorretteValide = (TextView) findViewById(R.id.textRisposteCorretteValide);
-        risposteErrate = (TextView) findViewById(R.id.textRisposteErrate);
-        risposteTotali = (TextView) findViewById(R.id.textRisposteTotali);
         aggiornaQuesito();
-
     }
 
     /**
-     * Metodo onClickAltroQuesito rappresenta lo spostamento da un quesito all'altro con un semplice click sui due
+     * Metodo onClickAltroQuesito effettua lo spostamento da un quesito all'altro con un semplice click sui due
      * pulsante Prev e Succ.
      * @param v è il pulsante riferito a prev o succ.
      * @throws Exception
@@ -118,8 +110,8 @@ public class DolceMatematica extends AppCompatActivity {
     /**
      * Metodo onClickRisposta rappresenta la risposta data dall'utente e la confronta con la risposta salvata. Se sono uguali
      * restituisce:"Giusto", altrimenti restituisce:"Sbagliato".
-     * @param v rappresenta i due pulsanti Vero-Falso.
-     * @throws Exception
+     * @param v rappresenta il pulsante premuto, uno dei due pulsanti Vero o also.
+     * @throws Exception viene lanciata una eccezione controllata se non viene date una risposta
      */
 
     public void onClickRisposta(View v) throws Exception {
@@ -141,7 +133,6 @@ public class DolceMatematica extends AppCompatActivity {
         }
         str = (risposta == risposta_corretta) ? "Giusto!!!" : "Sbagliato.";
         Toast.makeText(getApplicationContext(), str, Toast.LENGTH_SHORT).show();
-        ;
 
         if (risposta == risposta_corretta) {
 

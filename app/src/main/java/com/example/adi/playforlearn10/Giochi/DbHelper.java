@@ -10,6 +10,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DbHelper è una classe che effettua la creazione di un database contenenete 20 domande, che verranno estratte
+ * in maniera random. Queste domande verranno gestite da un arraylist di Domande e verranno visualizzare in maniera random
+ * 5 di esse.
+ */
 public class DbHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
@@ -23,10 +28,13 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String KEY_OPTB= "optb";
     private static final String KEY_OPTC= "optc";
     private SQLiteDatabase dbase;
+
+
     public DbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     @Override
+
     public void onCreate(SQLiteDatabase db) {
         dbase=db;
         String sql = "CREATE TABLE IF NOT EXISTS " + QUEST + " ( "
@@ -61,10 +69,15 @@ public class DbHelper extends SQLiteOpenHelper {
         this.addQuestion(q10);
     }
     @Override
+    /**
+     *
+     * Metodo onUpgrade permette l'aggiornamento del database, prendendo in input il database e due interi.
+     * @param db oggetto di tipo database al quale si fa accesso per ottenere le domande del gioco.
+     * @param oldV vecchia versione del database
+     * @param newV nuova versione del database con aggiornamenti.
+     */
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
-
         db.execSQL("DROP TABLE IF EXISTS " + QUEST);
-
         onCreate(db);
     }
 
@@ -79,6 +92,14 @@ public class DbHelper extends SQLiteOpenHelper {
 
         dbase.insert(QUEST, null, values);
     }
+
+    /**
+     * Il metodo getAllQuestions fa un interrogazione al database attraverso una query, selezionando tutti i campi delle varie
+     * domande. Infine attraverso l'interfaccia cursor, permette l'accesso ai dati SQL riga per riga. Attraverso i metodi moveToFirst
+     * e moveToNext() è possibile ottenere gli altri dati.
+     *
+     * @return lista : rappresenta la lista di domande memorizzate in un arrayList di Domande.
+     */
     public List<Domande> getAllQuestions() {
         List<Domande> lista = new ArrayList<Domande>();
 

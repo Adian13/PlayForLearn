@@ -14,10 +14,17 @@ import java.util.ArrayList;
 
 
 public class Gioco_StoGeoIng extends AppCompatActivity{
-
+    /**
+     * E' un oggetto di tipo gioco che è specificato per una tipologia di gioco, in cui bisogna scegliere la risposta esatta tra 4 risposte.
+     * @param soluzione opzione esatta
+     * @param opzione1 prima opzione
+     * @param opzione2 seconda opzione
+     * @param opzione3 terza opzione
+     * @param immagine immagine con il quesito
+     * @param opzioni   array di opzioni che vengono mostrate mischiate tra loro.
+     */
     public String soluzione,opzione1, opzione2, opzione3;
     public Integer immagine;
-    public Drawable icona;
     public Gioco_StoGeoIng(Integer immagine, String soluzione, String opzione1, String opzione2, String opzione3) {
         this.immagine= immagine;
         this.soluzione = soluzione;
@@ -71,4 +78,3 @@ public class Gioco_StoGeoIng extends AppCompatActivity{
         return immagine;
     }
 }
-//TODO javadoc

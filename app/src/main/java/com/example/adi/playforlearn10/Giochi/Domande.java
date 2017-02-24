@@ -1,7 +1,7 @@
 package com.example.adi.playforlearn10.Giochi;
-
 /**
- * Created by raffaeledellaporta on 08/01/2017.
+ * Domande è una classe che contiene le domande del gioco Quiz_italiano. Ha vari metodi get e set che restituiscono la
+ * domanda, le tre opzioni di scelta e la risposta sottoforma di stringhe.
  */
 public class Domande {
     private int ID;
@@ -68,4 +68,3 @@ public class Domande {
     }
 
 }
-//TODO javaDoc

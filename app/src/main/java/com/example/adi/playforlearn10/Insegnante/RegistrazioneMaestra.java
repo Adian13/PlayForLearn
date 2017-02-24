@@ -1,4 +1,4 @@
-package com.example.adi.playforlearn10.Insegnate;
+/*package com.example.adi.playforlearn10.Insegnante;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,16 +17,17 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-import com.example.adi.playforlearn10.Insegnate.AccountMaestra;
 import com.example.adi.playforlearn10.LoginActivityRaffaele;
 import com.example.adi.playforlearn10.R;
 import com.example.adi.playforlearn10.RegistrazioneUtenteClasse;
 
 import java.util.HashMap;
 
+*/
 /**
  * Created by raffaeledellaporta on 16/02/2017.
- */
+ *//*
+
 
 public class RegistrazioneMaestra extends AppCompatActivity implements View.OnClickListener {
     private TextInputEditText username_us,nome_no,cognome_co,password_pa;
@@ -180,4 +181,4 @@ public class RegistrazioneMaestra extends AppCompatActivity implements View.OnCl
     }
     //TODO javadoc
 }
-
+*/

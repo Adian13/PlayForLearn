@@ -1,3 +1,4 @@
+/*
 package com.example.adi.playforlearn10;
 
 import android.app.ProgressDialog;
@@ -10,8 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.adi.playforlearn10.Insegnate.HomeMaestra;
-import com.example.adi.playforlearn10.Insegnate.RegistrazioneMaestra;
+import com.example.adi.playforlearn10.Insegnante.HomeMaestra;
+import com.example.adi.playforlearn10.Insegnante.RegistrazioneMaestra;
 
 
 import java.util.HashMap;
@@ -102,3 +103,4 @@ public class LoginActivityRaffaele extends AppCompatActivity implements View.OnC
     }
 }
 
+*/
