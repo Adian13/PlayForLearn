@@ -84,7 +84,7 @@ public class ListaAlunni3 extends AppCompatActivity {
             protected Object doInBackground(Object... params) {
                 String nome, record;
                 try {
-                    String ip = LoginActivityAndroidIda.INDIRIZZO;
+                    String ip = LoginActivity.INDIRIZZO;
                     int porta = 80;
                     String nomeFile = "webservice/lista3.php";
                     URL url = new URL("http", ip, porta, nomeFile);

@@ -55,48 +55,20 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
 
         if(materia.compareTo(STORIA)==0){
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_lampada,"Lampada","Letto","Divano","Sedia"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_letto,"Letto","Tavolo","Divano","Sedia"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_padella,"Padella","Piatto","Tavolo","Cucchiaio"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_vasca,"Vasca","Water","Sedia","Scrivania"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.cane, "Cane", "Pizza", "Colore", "Cosa"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_vasca,"Vasca","Water","Sedia","Scrivania"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.cane, "Cane", "Pizza", "Colore", "Cosa"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.graffiti, "Graffiti", "fiume", "computer", "fiore"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.casa, "Casa", "Piscina", "Cortile", "Pallone"));
-        }
+            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.darenome_casa_letto,"Letto","Tavolo","Divano","Sedia"));}
         else if(materia.compareTo(GEOGRAFIA)==0){
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sole, "Sole", "Sardegna", "Sardina", "mamma"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.stelle, "Stelle", "mappa", "cappa", "mamma"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.mare, "Mare", "pesce", "carne", "posto"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.pietra, "pietra","animale", "penna", "pingu" ));
+
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.montagna, "Montagna", "heidi", "capre", "fiume"));
         }
         else if(materia.compareTo(INGLESE)==0){
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.piramide, "Piramide", "Pappagallo", "Nonno", "Barca"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "Prato", "animale", "penna", "pingu"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.prato, "flowers", "animale", "penna", "pingu"));
+
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sole, "Sun", "Sardegna", "Sardina", "mamma"));
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.stelle, "Stars", "mappa", "cappa", "mamma"));
 
         } else if(materia.compareTo(MATEMATICA)==0){
             giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.images, "15", "a", "d", "casa"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.calcoli, "55", "125", "60", "kiwi"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_ciclisti, "C G F", "125", "nessuna", "kiwi"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_sciatori, "A B H", "125", "nessuna", "kiwi"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_sciatori, "A B H", "125", "nessuna", "kiwi"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.ombra_cavallo, "C I J", "ciuccio", "galoppiamo", "nessuno"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sfere, "7", "appari drago", "1", "5"));
-            giochiDaLanciare.add(new Gioco_StoGeoIng(R.drawable.sfere, "7", "appari drago", "1", "5"));
 
         }
 
@@ -111,21 +83,11 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
         pulsanti.add(bt2);
         pulsanti.add(bt3);
         pulsanti.add(bt4);
-        setOptions(opzioni, pulsanti);
+
 
         //   esercizi.add(esercizi di storia);
         //}
         makeBind();
-    }
-    private void setOptions(ArrayList<String> opzioni, ArrayList<Button> pulsanti) {
-        int p = 0, o = 0;
-        for (int i = 0; i < 4; i++) {
-            p = getRandomInt(pulsanti.size());
-            o = getRandomInt(opzioni.size());
-            pulsanti.get(p).setText(opzioni.get(o));
-            pulsanti.remove(p);
-            opzioni.remove(o);
-        }
     }
 
     private void makeBind() {
@@ -188,11 +150,7 @@ public class ActivityGiocoStoGioIng extends AppCompatActivity implements Seriali
         i.putExtra("record", record);
     }*/
 
-    private Integer getRandomInt(int max) {
-        int n = ((int) Math.round(Math.random() * max) % max);
-        if (n >= 0) Log.d("DEBUG", "Il numero casuale scelto è " + n);
-        return n >= 0 ? n : max - 1;
-    }
+
 
     @Override
     public void onBackPressed() {

@@ -1,3 +1,4 @@
+/*
 package com.example.adi.playforlearn10;
 
 import android.app.ProgressDialog;
@@ -19,9 +20,11 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
+*/
 /**
  * Created by raffaeledellaporta on 28/01/2017.
- */
+ *//*
+
 
 public class RegUtente extends AppCompatActivity implements View.OnClickListener {
     private TextInputEditText us,pw,name,surname;
@@ -148,3 +151,4 @@ public class RegUtente extends AppCompatActivity implements View.OnClickListener
         surname.setText("");
     }
 }
+*/

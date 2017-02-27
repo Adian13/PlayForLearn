@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.adi.playforlearn10.LoginActivityDaniele">
+    tools:context="com.example.adi.playforlearn10.LoginActivity">
 
     <LinearLayout
         android:layout_alignParentTop="true"
@@ -117,21 +117,21 @@
 
         <Button
             android:layout_margin="5dp"
-            android:onClick="entra"
-            android:text="Entra"
-            android:id="@+id/btEntra"
-            android:padding="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:layout_margin="5dp"
             android:onClick="registrati"
             android:padding="15dp"
             android:text="Registrati"
             android:id="@+id/btRegistrati"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:text="Entra"
+            android:id="@+id/btEntra"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 

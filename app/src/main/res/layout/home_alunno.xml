@@ -24,11 +24,12 @@
         android:orientation="vertical"
         android:background="#00ffffff"
         android:layout_gravity="center_horizontal">
-        <Button
+        <ImageButton
             android:text="Italiano"
             android:layout_marginBottom="20dp"
             android:background="@drawable/button_italiano"
             android:textAllCaps="false"
+            android:src="@drawable/abc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btItaliano" />

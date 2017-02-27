@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.adi.playforlearn10.Games;
-import com.example.adi.playforlearn10.LoginActivityAndroidIda;
+import com.example.adi.playforlearn10.LoginActivity;
 import com.example.adi.playforlearn10.R;
 import com.example.adi.playforlearn10.Record.RecordPersonali;
 import com.example.adi.playforlearn10.Record.RecordTop10;
@@ -104,7 +104,7 @@ public class HomeAlunno extends AppCompatActivity {
         builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(getApplicationContext(),LoginActivityAndroidIda.class));
+                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                 finish();
             }
         });

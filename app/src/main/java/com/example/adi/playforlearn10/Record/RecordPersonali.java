@@ -20,9 +20,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-/**
- * Created by Adi on 22/01/2017.
- */
+
 
 public class RecordPersonali extends AppCompatActivity {
 
@@ -39,7 +37,7 @@ public class RecordPersonali extends AppCompatActivity {
         tvRecordStoria = (TextView)findViewById(R.id.tvRecordStoria);
         tvRecordGeografia = (TextView)findViewById(R.id.tvRecordGeografia);
         tvRecordInglese = (TextView)findViewById(R.id.tvRecordInglese);
-        aggiornaLayout();
+
     }
 
     private void aggiornaLayout(){
@@ -57,31 +55,30 @@ public class RecordPersonali extends AppCompatActivity {
             case HomeAlunno.ITALIANO:
                 if(record.getRecordItaliano() < newRecord){
                     record.setRecordItaliano(newRecord);
-                    salvaRecordSuFile(record, context);
+
                 }
                 break;
             case HomeAlunno.GEOGRAFIA:
                 if(record.getRecordGeografia() < newRecord){
                     record.setRecordGeografia(newRecord);
-                    salvaRecordSuFile(record, context);
+
                 }
                 break;
             case HomeAlunno.INGLESE:
                 if(record.getRecordInglese() < newRecord){
                     record.setRecordInglese(newRecord);
-                    salvaRecordSuFile(record, context);
-                }
+                   }
                 break;
             case HomeAlunno.MATEMATICA:
                 if(record.getRecordMatematica() < newRecord){
                     record.setRecordMatematica(newRecord);
-                    salvaRecordSuFile(record, context);
+
                 }
                 break;
             case HomeAlunno.STORIA:
                 if(record.getRecordStoria() < newRecord){
                     record.setRecordStoria(newRecord);
-                    salvaRecordSuFile(record, context);
+
                 }
                 break;
         }
@@ -91,7 +88,7 @@ public class RecordPersonali extends AppCompatActivity {
         File file = new File(context.getFilesDir(), "recordPersonali");
         if(!file.exists()){
 
-            record = new Record();
+
             salvaRecordSuFile(record, context);
             return record;
         }
@@ -100,7 +97,7 @@ public class RecordPersonali extends AppCompatActivity {
             FileInputStream fileInputStream =  new FileInputStream(file);
             ObjectInputStream fileObjectInputStream = new ObjectInputStream(fileInputStream);
             record = (Record)fileObjectInputStream.readObject();
-            fileInputStream.close();
+
             Log.d("DEBUG", "[RecordPersonali] Ho salvato il record");
             return record;
         } catch (IOException e) {

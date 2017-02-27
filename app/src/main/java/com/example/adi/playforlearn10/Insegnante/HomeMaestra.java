@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.adi.playforlearn10.Insegnante.AccountMaestra;
 import com.example.adi.playforlearn10.R;
 import com.example.adi.playforlearn10.Record.RecordTop10;
 import com.example.adi.playforlearn10.SezioneClassi;
 
-/**
- * Created by raffaeledellaporta on 28/01/2017.
+/**HomeMaestra è la classe che si interfaccia con l'intero sistema PlayForLearn. Permette la visualizzazione delle varie materie
+ * di un insegnante e un pulsante per la visualizzazione della top10 degli alunni.
  */
 
 public class HomeMaestra extends AppCompatActivity {
@@ -40,23 +41,22 @@ public class HomeMaestra extends AppCompatActivity {
         finish();
     }
 
-    public void storia_e_geografia(View v){
+    public void storia(View v){
+        Intent i = new Intent(getApplicationContext(),SezioneClassi.class);
+        startActivity(i);
+        finish();
+    }
+
+    public void geografia(View v){
         Intent i = new Intent(getApplicationContext(),SezioneClassi.class);
         startActivity(i);
         finish();
     }
 
     public void account(View v){
-        /*Intent i = new Intent(getApplicationContext(),AccountMaestra.class);
+        Intent i = new Intent(getApplicationContext(),  AccountMaestra.class);
         startActivity(i);
-        finish();*/
-    }
-
-    public void notifica(View v){
-        //TODO da vedere bene
-        // Intent i = new Intent(getApplicationContext(),NotificaAccettazioneUtente.class);
-       // startActivity(i);
-        //finish();
+        finish();
     }
 
     public void top10(View v){
@@ -64,5 +64,4 @@ public class HomeMaestra extends AppCompatActivity {
         startActivity(i);
         finish();
     }
-    //TODO javadoc
 }

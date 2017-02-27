@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.adi.playforlearn10.Alunno.HomeAlunno;
-import com.example.adi.playforlearn10.LoginActivityAndroidIda;
+import com.example.adi.playforlearn10.LoginActivity;
 import com.example.adi.playforlearn10.R;
 
 import org.json.JSONException;
@@ -25,6 +25,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Prende i dati dal database tramite una query e li mostra all'utente
+ */
 public class RecordTop10 extends AppCompatActivity {
     private static ArrayList<Record> records;
 
@@ -53,7 +56,7 @@ public class RecordTop10 extends AppCompatActivity {
             protected Object doInBackground(Object... params) {
                 String nome, gioco, record;
                 try {
-                    String ip = LoginActivityAndroidIda.INDIRIZZO;
+                    String ip = LoginActivity.INDIRIZZO;
                     int porta = 80;
                     String nomeFile = "webservice/getTop10.php";
                     URL url = new URL("http", ip, porta, nomeFile);
@@ -64,7 +67,7 @@ public class RecordTop10 extends AppCompatActivity {
                     while (scanner.hasNext()) {
                         response = scanner.nextLine();
                         obj = new JSONObject(response);
-                        nome = obj.getString("fk_Username");
+                        nome = obj.getString("username");
                         gioco = obj.getString("NomeGioco");
                         record = obj.getString("Record");
                         records.add(new Record(nome,gioco,record));

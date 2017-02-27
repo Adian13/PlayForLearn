@@ -1,8 +1,11 @@
+/*
 package com.example.adi.playforlearn10;
 
+*/
 /**
  * Created by raffaeledellaporta on 13/02/2017.
- */
+ *//*
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -77,3 +80,4 @@ public class RegistrazioneUtenteClasse {
         return result.toString();
     }
 }
+*/

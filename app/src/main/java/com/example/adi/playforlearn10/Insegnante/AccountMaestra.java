@@ -10,9 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.adi.playforlearn10.LoginActivity;
 import com.example.adi.playforlearn10.R;
-import com.example.adi.playforlearn10.RegUtente;
-import com.example.adi.playforlearn10.Registrazione;
 
 /**
  * AccountMaestra è la classe che consente di visualizzare le informazioni inerenti ad ogni utente amministratore registratosi
@@ -45,13 +44,12 @@ public class AccountMaestra  extends AppCompatActivity {
         getSupportActionBar().setTitle("Account Maestra");
 
     }
-}
 
 /**
      * Permette di uscire dal login
      * @param v mostra un dialolg per la scelta di uscire o meno dall'account
-     *//*
-
+     *
+ */
     public void logout(View v){
         miaAlert.setTitle("Vuoi davvero uscire dal sistema?");
         miaAlert.setCancelable(false);
@@ -63,7 +61,7 @@ public class AccountMaestra  extends AppCompatActivity {
 
         miaAlert.setNegativeButton("Si", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                Intent i = new Intent(getApplicationContext(), LoginActivityRaffaele.class);
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(i);
                 finish();
 
@@ -77,26 +75,21 @@ public class AccountMaestra  extends AppCompatActivity {
 
 /**
      * rimanda alla pagina di registrazione
-     * @param v
-     *//*
+     * @param v la funzione viene chiamata al click del pulsante
+ */
 
     public void aggiungiUtente(View v) {
-        Intent i = new Intent(getApplicationContext(), RegUtente.class);
+        Intent i = new Intent(getApplicationContext(), Registrazione.class);
         startActivity(i);
         finish();
     }
-
-    */
-/**
+    /**
      * Rimanda alla pagina principale del sistema
-     * @param v
-
-
+     * @param v la funzione viene chiamata al click del pulsante
+     */
     public void home(View v) {
         Intent i = new Intent(getApplicationContext(), HomeMaestra.class);
         startActivity(i);
         finish();
     }
 }
-
-*/

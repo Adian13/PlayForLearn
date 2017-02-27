@@ -9,11 +9,13 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.adi.playforlearn10.Alunno.HomeAlunno;
+import com.example.adi.playforlearn10.Insegnante.HomeMaestra;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,7 +34,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class LoginActivityDaniele extends AppCompatActivity {
+public class LoginActivity
+        extends AppCompatActivity {
 
     // TODO: 18/02/2017  il layout fa schifo, ma basta adattare il codice al nuovo layout
     // TODO: 18/02/2017 non so come farai a gestire l'alunno e la maestra quindi ho chiamato direttamente la HomeAlunno 
@@ -42,6 +45,7 @@ public class LoginActivityDaniele extends AppCompatActivity {
     private String username, password, tipologia;
     private ImageButton ibAlunno, ibMaestra;
     public static Utente utenteLoggato;
+    public static final String INDIRIZZO ="172.19.57.174";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +61,15 @@ public class LoginActivityDaniele extends AppCompatActivity {
             }
         });
         etPassword = (EditText)findViewById(R.id.etPassword);
-
         ibAlunno = (ImageButton)findViewById(R.id.ibAlunno);
         ibMaestra = (ImageButton)findViewById(R.id.ibMaestra);
+        Button entra = (Button)findViewById(R.id.btEntra);
+        entra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                entra();
+            }
+        });
 
     }
     public void changeBackground(View view) {
@@ -76,7 +86,7 @@ public class LoginActivityDaniele extends AppCompatActivity {
         }
     }
 
-    public void entra(View view){
+    public void entra(){
         if(checkEmpty()){
             return;
         }

@@ -10,21 +10,46 @@
         android:layout_height="30dp"
         android:orientation="horizontal"
         android:layout_marginBottom="3dp"
-        android:layout_marginTop="2dp">
+        android:layout_marginTop="10dp">
+
+
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_marginLeft="170dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="inserisci stringa"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_search_category_default"
+            android:id="@+id/lente"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text=" Username "
-            android:layout_gravity="left"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="7dp"
             android:textSize="15dp"/>
 
+
+
         <TextView
-            android:layout_marginLeft="160dp"
+            android:layout_marginLeft="170dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="7dp"
             android:text=" Record"
             android:textSize="15dp" />
     </LinearLayout>

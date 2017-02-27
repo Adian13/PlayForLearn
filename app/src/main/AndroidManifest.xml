@@ -27,7 +27,6 @@
         <activity android:name=".Alunno.AccountAlunno" />
         <activity android:name=".Giochi.DolceMatematica" />
         <activity android:name=".Games" />
-        <activity android:name=".Registrazione"/>
         <activity android:name=".Giochi.Suggerimento" />
         <activity android:name=".Giochi.FineGioco" />
         <activity android:name=".Record.RecordPersonali" />
@@ -35,7 +34,6 @@
         <activity android:name=".Giochi.QuizActivityItaliano" />
         <activity android:name=".Record.RecordTop10" />
         <activity android:name=".Insegnante.HomeMaestra" />
-        <activity android:name=".RegUtente" />
         <activity android:name=".ListaAlunni"></activity>
         <activity android:name=".SezioneClassi"></activity>
         <activity android:name=".ListaAlunni2"></activity>
@@ -49,7 +47,7 @@
             android:label="@string/title_activity_games"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         -->
-        <activity android:name=".LoginActivityDaniele">
+        <activity android:name=".LoginActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>
