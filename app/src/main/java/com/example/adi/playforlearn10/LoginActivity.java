@@ -54,12 +54,6 @@ public class LoginActivity
         getSupportActionBar().setTitle("Login");
 
         etUsername = (EditText)findViewById(R.id.etUsername);
-        etUsername.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loginSuccess();
-            }
-        });
         etPassword = (EditText)findViewById(R.id.etPassword);
         ibAlunno = (ImageButton)findViewById(R.id.ibAlunno);
         ibMaestra = (ImageButton)findViewById(R.id.ibMaestra);
